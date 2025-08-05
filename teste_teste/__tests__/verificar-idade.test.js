@@ -24,4 +24,8 @@ describe('Teste de Verificação de Idade', () => {
     test('Verificar um valor indefinido deve gerar um erro', () => {
         expect(verificarIdade(undefined)).toBe("Erro: O valor recebido não é um número válido.")
     });
+
+    test('Verificar um valor negativo deve gerar um erro', () => {
+        expect(verificarIdade(-4)).toBe("Erro: O valor recebido não é um número válido.")
+    });
 })
