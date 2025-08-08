@@ -1,7 +1,13 @@
-const Header = ({titulo})=>{
-    return(
+import styles from './Header.module.css'
+
+const Header = ({ titulo }) => {
+    return (
         <>
-        <h1>{titulo}</h1>
+            <header className={styles.header}>
+                <h1 className={styles.title}>{titulo}</h1>
+            </header>
         </>
     )
 }
+
+export default Header

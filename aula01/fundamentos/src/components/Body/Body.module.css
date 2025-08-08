@@ -1,0 +1,26 @@
+.body{
+    padding: 20px;
+    background: #f9f9f9;
+
+    .cardContainer{
+        display: flex;
+        gap: 6px;
+        flex: wrap;
+    }
+}
+
+/* .body{
+    .cardContainer{
+        h1{
+
+        }
+
+        h2{
+            a{
+                &:hover{
+
+                }
+            }
+        }
+    }
+} */
