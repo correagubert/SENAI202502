@@ -14,27 +14,32 @@ export const CardAPI = () => {
 
     const [users, setUsers] = useState([])
 
+    const [filtro, setFiltro] = useState("")
+
     useEffect(() => {
         fetch('https://jsonplaceholder.typicode.com/users')
             .then(response => response.json())
             .then(data => {
-                setUsers(data)
+                const filtrados = data.filter((user) => user.name.toLowerCase().includes(filtro.toLowerCase()))
+                setUsers(filtrados)
             })
         console.log(users)
-    }, [])
+    }, [filtro])
 
     return (
         <>
             {/* <p>{contador}</p> */}
             {/* <button onClick={incrementaValor}>Incrementar Valor</button> */}
 
+            <input type="text" placeholder="Filtrar por nome..." className={styles.inputFiltro} value={filtro} onChange={(e) => setFiltro(e.target.value)} />
+
             <div className={styles.cardContainerAPI}>
                 {
                     users.map((user) => (
                         <div className={styles.card} key={user.id}>
-                        <h3>{user.name}</h3>
-                        <p>{user.email}</p>
-                        <p>{user.email.street}</p>
+                            <h3>{user.name}</h3>
+                            <p>{user.email}</p>
+                            <p>{user.email.street}</p>
                         </div>
                     ))
                 }
