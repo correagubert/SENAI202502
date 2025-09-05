@@ -1,13 +1,13 @@
 import styles from './Footer.module.css'
 
-const Footer = ({ rodape }) => {
-    return (
-        <>
-            <footer className={styles.footer}>
-                <p className={styles.rodape}>{rodape}</p>
-            </footer>
-        </>
-    )
-}
+const Header = ({ autor }) => {
+  return (
+    <>
+      <footer className={styles.footer}>
+        <p className={styles.autor}>{autor}</p>
+      </footer>
+    </>
+  );
+};
 
-export default Footer
+export default Header;

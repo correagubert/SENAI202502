@@ -4,17 +4,19 @@
 
     .cardContainer{
         display: flex;
-        gap: 6px;
-        flex: wrap;
+        gap: 16px;
+        flex-wrap: wrap;
     }
 }
+/* 
+.body .cardContainer h1{}
+.body .cardContainer h2{}
 
-/* .body{
+.body{
     .cardContainer{
         h1{
 
         }
-
         h2{
             a{
                 &:hover{
@@ -22,5 +24,6 @@
                 }
             }
         }
+
     }
 } */
