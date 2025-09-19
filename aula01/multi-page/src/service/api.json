@@ -1,60 +1,19 @@
 {
-  "posts": [
-    {
-      "id": "1",
-      "title": "a title",
-      "views": 100,
-      "image": "https://placehold.co/640x480",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-    },
-    {
-      "id": "2",
-      "title": "another title",
-      "views": 200,
-      "image": "https://placehold.co/720x368",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-    }
-  ],
-  "comments": [
-    {
-      "id": "1",
-      "text": "a comment about post 1",
-      "postId": "1"
-    },
-    {
-      "id": "2",
-      "text": "another comment about post 1",
-      "postId": "1"
-    }
-  ],
-  "profile": {
-    "name": "typicode"
-  },
-  "users": [
-    {
-      "id": "1",
-      "name": "João",
-      "cpf": "123.123.123-95"
-    },
-    {
-      "id": "2",
-      "name": "Maria",
-      "cpf": "234.567.89-00"
-    },
-    {
-      "id": "3",
-      "name": "Huguinho",
-      "cpf": "321.654.987-00"
-    },
-    {
-      "id": "4",
-      "name": "Zezinho",
-      "cpf": "987.654.321-11"
-    },
-    {
-      "id": "5",
-      "name": "Luisinho",
-      "cpf": "333.666.999-12"
-    }
-  ]
-}
+    "posts": [
+      { 
+        "id": "1",
+        "title": "a title",
+        "views": 100,
+        "image":"https://placehold.co/250x200",
+        "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vitae imperdiet libero. Etiam elementum nisi sodales, venenatis urna at, mollis augue. Nam feugiat dolor vel elit dapibus, a lobortis magna tristique. Integer orci nunc, consequat ac vehicula nec, pretium non ipsum. Sed purus justo, tempor ac pharetra et, placerat sed odio. Ut placerat nisi lectus, ut sagittis mauris mollis vel. Aliquam sollicitudin velit orci. Sed quis diam pellentesque, porttitor felis nec, ornare ex. Donec nec diam placerat libero fermentum elementum vitae vitae erat. Vestibulum mollis luctus nisi nec volutpat. Aliquam a accumsan diam. Proin porta nibh sed ornare convallis. Aliquam sodales molestie tellus, at dictum velit." 
+      },
+      {
+        "id": "2",
+        "title": "another title",
+        "views": 200,
+        "image":"https://placehold.co/250x200",
+        "description":"In aliquam egestas magna a fermentum. Aenean a malesuada nisi, vel blandit neque. Phasellus dictum quam leo, a imperdiet lorem auctor quis. Cras malesuada, augue at convallis egestas, neque erat lacinia eros, nec cursus turpis nunc eget tellus. Fusce tempus blandit cursus. Etiam at fermentum magna. Fusce vehicula tincidunt nisi eu convallis. Donec elit purus, ullamcorper eu nibh sed, blandit ultricies augue. Phasellus mollis quam sed justo pellentesque interdum. Sed porta consectetur vulputate. Aliquam quam leo, ultrices vitae orci eu, tincidunt ultricies magna. Duis lacinia ullamcorper orci, et cursus lacus viverra interdum."
+       }
+    ]
+    
+  }

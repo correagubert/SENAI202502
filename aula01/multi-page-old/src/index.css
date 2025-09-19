@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
-@layer components {
+@layer components{
     .card {
         box-shadow: 3px 3px 5px #DDD;
         width: 300px;
