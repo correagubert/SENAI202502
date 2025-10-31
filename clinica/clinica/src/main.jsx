@@ -15,6 +15,7 @@ import './index.css'
 import Login from './pages/Login/Login'
 import { AuthProvider } from './contexts/AuthContext'
 import Dashboard from './pages/Dashboard/Dashboard'
+import MedicalRecordList from './components/MedicalRecordList/MedicalRecordList'
 import PrivateRoute from './components/PrivateRoute/PrivateRoute'
 import DashboardLayout from './layouts/DashboardLayout'
 // import App from './App.jsx'
@@ -33,7 +34,7 @@ const router = createBrowserRouter([
     ),
     children:[
       {path: 'dashboard', element: <Dashboard />},
-      // {path: 'pacientes', element: <PatientsPage />}
+      {path: 'prontuarios', element: <MedicalRecordList />}
     ]
   }
 ])
