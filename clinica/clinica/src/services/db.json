@@ -132,18 +132,49 @@
       "medication": "Benegrip",
       "dosagePrecaution": "2 vezes ao dia",
       "id": "2"
+    },
+    {
+      "id": "4b42",
+      "patientId": "1",
+      "reason": "abuble",
+      "date": "275760-06-06",
+      "time": "06:59",
+      "description": "han",
+      "medication": "drogas",
+      "dosagePrecaution": "lalala"
+    },
+    {
+      "id": "76df",
+      "patientId": "1",
+      "reason": "teste",
+      "date": "1111-01-01",
+      "time": "11:11",
+      "description": "1",
+      "medication": "1",
+      "dosagePrecaution": "1"
     }
   ],
   "exams": [
     {
+      "id": "1",
       "name": "Cardiológico",
       "date": "12-07-2023",
       "time": "15:30",
       "type": "Cateterismo",
       "laboratory": "Santa Luzia",
       "documentURL": "site.com.br/exame.pdf",
-      "results": "Dados do exame",
-      "id": "1"
+      "results": "Dados do exame"
+    },
+    {
+      "id": "3ad7",
+      "patientId": "1",
+      "name": "1221",
+      "date": "2025-11-13",
+      "time": "21:27",
+      "type": "12312",
+      "laboratory": "312321",
+      "documentURL": "321312",
+      "results": "312321"
     }
   ]
 }

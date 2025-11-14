@@ -5,7 +5,7 @@ import { toast, ToastContainer } from 'react-toastify'
 // Importação do Componente Modal
 import Modal from "../../components/Modal/Modal.jsx"
 
-const ConsultorioForm = () => {
+const ExamForm = () => {
     // Variáveis e Estados
     const [searchTerm, setSearchTerm] = useState('')
     const [patients, setPatients] = useState([])
@@ -14,12 +14,13 @@ const ConsultorioForm = () => {
     const [isSaving, setIsSaving] = useState(false)
 
     const [formData, setFormData] = useState({
-        reason: "",
+        name: "",
         date: "",
         time: "",
-        description: "",
-        medication: "",
-        dosagePrecaution: "",
+        type: "",
+        laboratory: "",
+        documentURL: "",
+        results: "",
     })
 
     // Busca de Pacientes
@@ -86,8 +87,8 @@ const ConsultorioForm = () => {
                 ...formData
             }
 
-            await axios.post("http://localhost:3000/consults", dataToSave)
-            toast.success("Consulta cadastrada com sucesso!", {
+            await axios.post("http://localhost:3000/exams", dataToSave)
+            toast.success("Exame cadastrado com sucesso!", {
                 autoClose: 3000,
                 hideProgressBar: true
             })
@@ -95,7 +96,7 @@ const ConsultorioForm = () => {
             resetForm()
             handleCloseModal()
         } catch (error) {
-            toast.error("Erro ao cadastrar consulta!", {
+            toast.error("Erro ao cadastrar exame!", {
                 autoClose: 3000,
                 hideProgressBar: true
             })
@@ -108,7 +109,7 @@ const ConsultorioForm = () => {
         <section className='p-6 text-gray-800'>
             {/* Campo de Busca*/}
             <div className='mb-6'>
-                <label htmlFor='name' className='block text-sm font-semibold mb-2'>Buscar paciente para cadastrar consulta</label>
+                <label htmlFor='name' className='block text-sm font-semibold mb-2'>Buscar paciente para cadastrar exame</label>
                 <input
                     id='name'
                     type="text"
@@ -152,7 +153,7 @@ const ConsultorioForm = () => {
                 {selectedPatient && (
                     <>
                         <h2 className='text-lg font-bold mb-4 text-cyan-700'>
-                            Cadastrar consulta para {selectedPatient.fullName}
+                            Cadastrar exame para {selectedPatient.fullName}
                         </h2>
 
                         {/* Dados básicos */}
@@ -167,12 +168,12 @@ const ConsultorioForm = () => {
 
                         <form onSubmit={handleSubmit} className='space-y-4'>
                             <div>
-                                <label className='block text-sm font-medium mb-1' htmlFor='reason'>Motivo da Consulta</label>
+                                <label className='block text-sm font-medium mb-1' htmlFor='name'>Exame</label>
                                 <input
                                     type='text'
-                                    name='reason'
-                                    id='reason'
-                                    value={formData.reason}
+                                    name='name'
+                                    id='name'
+                                    value={formData.name}
                                     onChange={handleInputChange}
                                     required
                                     className='w-full border p-2 rounded-lg focus:ring-cyan-600 outline-none' />
@@ -202,38 +203,48 @@ const ConsultorioForm = () => {
                                         required
                                         className='w-full border p-2 rounded-lg focus:ring-cyan-600 outline-none' />
                                 </div>
-                            </div>
-
                                 <div>
-                                    <label className='block text-sm font-medium mb-1' htmlFor='description'>Descrição do Problema</label>
-                                    <textarea
-                                        name='description'
-                                        id='description'
-                                        value={formData.description}
-                                        onChange={handleInputChange}
-                                        rows='3'
-                                        required
-                                        className='w-full border p-2 rounded-lg focus:ring-cyan-600 outline-none' />
-                                </div>
-
-                                <div>
-                                    <label className='block text-sm font-medium mb-1' htmlFor='medication'>Medicação Receitada</label>
+                                    <label className='block text-sm font-medium mb-1' htmlFor='type'>Tipo de Exame</label>
                                     <input
-                                        type='medication'
-                                        name='medication'
-                                        id='medication'
-                                        value={formData.medication}
+                                    type='text'
+                                    name='type'
+                                    id='type'
+                                    value={formData.type}
+                                    onChange={handleInputChange}
+                                    required
+                                    className='w-full border p-2 rounded-lg focus:ring-cyan-600 outline-none' />
+                                </div>
+
+                                <div>
+                                    <label className='block text-sm font-medium mb-1' htmlFor='laboratory'>Laboratório</label>
+                                    <input
+                                    type='text'
+                                    name='laboratory'
+                                    id='laboratory'
+                                    value={formData.laboratory}
+                                    onChange={handleInputChange}
+                                    required
+                                    className='w-full border p-2 rounded-lg focus:ring-cyan-600 outline-none' />
+                                </div>
+                            </div>
+                                <div>
+                                    <label className='block text-sm font-medium mb-1' htmlFor='documentURL'>Link para o Documento</label>
+                                    <input
+                                        type='documentURL'
+                                        name='documentURL'
+                                        id='documentURL'
+                                        value={formData.documentURL}
                                         onChange={handleInputChange}
                                         required
                                         className='w-full border p-2 rounded-lg focus:ring-cyan-600 outline-none' />
                                 </div>
 
                                 <div>
-                                    <label className='block text-sm font-medium mb-1' htmlFor='dosagePrecaution'>Dosagem e Precauções</label>
+                                    <label className='block text-sm font-medium mb-1' htmlFor='results'>Resultados</label>
                                     <textarea
-                                        name='dosagePrecaution'
-                                        id='dosagePrecaution'
-                                        value={formData.dosagePrecaution}
+                                        name='results'
+                                        id='results'
+                                        value={formData.results}
                                         onChange={handleInputChange}
                                         rows='3'
                                         required
@@ -262,7 +273,7 @@ const ConsultorioForm = () => {
     )
 }
 
-export default ConsultorioForm
+export default ExamForm
 
 // • • • - - - • • •
 // • • • - - - • • •
